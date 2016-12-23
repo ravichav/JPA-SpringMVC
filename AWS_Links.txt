@@ -1,0 +1,74 @@
+AWS: Amazon Web Service Its Cloud Platform 1)Platform as services 2)Infra as services
+
+Create EC2 instance:
+PEM File to authenticate 
+
+How to configure the services:
+
+Autoscalling
+Load Balancer 
+Code Pipelines
+--------------
+
+Create New User 
+Add User
+select Programatic Access
+put User name - SpringBootUser which had Admin access
+click on Create User
+
+Which wil give you CSV file.Download it.
+-----------------
+
+Go to Compute
+click on EC2
+click on launch Instance
+Choose instance type: Look for T2 instance (Free Tier Eligible- In GREEN) Lets say Ubantu
+Select HTTP as port 
+create and launch instance
+Create New Key Pair- Download it locally.
+Chk View Instances Button to view 
+---------------------------------------
+
+GIT Specific:
+type gti shell --> It Wil Open up  Windows powershell window
+cd to project root dir which has gradle file in it
+cd..
+hit git init
+git add das-boot/
+your newly added files are in stagging now
+
+git status
+git commit -m with message 
+git log
+now push ur changes to remote branch
+git remote add origin <full path of repository>
+git remote -v
+git push origin(Alias) master
+
+
+------------------
+connect to SSH AWS terminal (created above) 
+open git shell
+type ssh -i <PEM file name> 
+// FOR Ec2 connect
+ssh -i "Spring-Boot-KP.pem" ubuntu@ec2-52-67-125-98.sa-east-1.compute.amazonaws.com
+
+cd ~
+type pwd
+mkdir ravichav
+cd ravichav
+git init spring-boot-repo (It will create local repo on EC2 instance)
+cd spring-boot-repo
+git pull <repo url>
+ls
+git branch (Will show local branches)
+git branch -r
+
+
+
+
+
+
+
+
+
